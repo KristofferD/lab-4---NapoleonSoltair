@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class CardStack {
+    protected List<Card> cards;
+
+    public CardStack() {
+        cards = new ArrayList<>();
+    }
+
+    public void addCard(Card card) {
+        cards.add(card);
+    }
+
+    public Card removeCard() {
+        if (cards.isEmpty()) {
+            return null;
+        }
+        return cards.remove(cards.size() - 1);
+    }
+
+    public boolean isEmpty() {
+        return cards.isEmpty();
+    }
+
+    public int size() {
+        return cards.size();
+    }
+
+    public Card getTopCard() {
+        if (cards.isEmpty()) {
+            return null;
+        }
+        return cards.get(cards.size() - 1);
+    }
+
+    public abstract boolean canAddCard(Card card);
+}

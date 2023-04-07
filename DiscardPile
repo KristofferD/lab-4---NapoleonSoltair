@@ -1,0 +1,22 @@
+import java.util.Stack;
+
+public class DiscardPile extends CardStack {
+    private Stack<Card> pile;
+    
+    public DiscardPile() {
+        super();
+        pile = new Stack<>();
+    }
+    
+    public void addCard(Card card) {
+        pile.push(card);
+    }
+    
+    public Card removeCard() {
+        return pile.pop();
+    }
+    
+    public boolean canRemoveCard() {
+        return !pile.isEmpty();
+    }
+}
