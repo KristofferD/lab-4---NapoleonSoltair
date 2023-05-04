@@ -1,4 +1,9 @@
 import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
 
 public class DiscardPile extends CardStack {
     private Stack<Card> pile;
@@ -36,6 +41,17 @@ public class DiscardPile extends CardStack {
         } else {
             return cards.get(cards.size() - 1);
         }
+    }
+
+    public Deck toDeck() {
+        List<Card> cards = new ArrayList<>();
+        while (!pile.isEmpty()) {
+            cards.add(pile.pop());
+        }
+        Collections.shuffle(cards);
+        Deck deck = new Deck();
+        deck.addCards(cards);
+        return deck;
     }
     
 }

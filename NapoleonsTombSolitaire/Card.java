@@ -27,6 +27,11 @@ public class Card {
         return card.getRank() == this.getRank() - 1 && !card.getColor().equals(this.getColor());
     }
     
+    public boolean isOneRankHigherAndOppositeColor(Card card) {
+        return (this.getRank() == card.getRank() - 1) && (this.isRed() != card.isRed());
+    }
+    
+    
 
     @Override
     public String toString() {

@@ -7,6 +7,9 @@ public class GameBoard {
     private List<Beam> beams;
     private List<Middle> middles;
     private List<KingStack> kingStacks;
+    private List<Card> cards;
+
+
 
     public GameBoard(Deck deck) {
         this.deck = deck;

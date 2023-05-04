@@ -5,7 +5,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import java.awt.Dimension;
-import java.awt.Graphics;
 
 public class NapoleonsTombSolitaire {
     public static void main(String[] args) {

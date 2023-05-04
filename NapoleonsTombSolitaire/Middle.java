@@ -12,6 +12,11 @@ public class Middle extends CardStack {
     public int getMiddleNumber() {
         return middleNumber;
     }
+
+    public Card removeCard() {
+        return cards.remove(cards.size() - 1);
+    }
+    
     
     @Override
     public boolean canAddCard(Card card) {

@@ -54,4 +54,16 @@ public abstract class CardStack {
             return lastCard.isOneRankLowerAndOppositeColor(firstNewCard);
         }
     }
+
+    public abstract boolean canAddCard(Card card);
+    
+    public boolean canAddCard(Card card) {
+        if (cards.isEmpty()) {
+            return card.getRank() == 13; // can only add a king to an empty stack
+        } else {
+            Card lastCard = cards.get(cards.size() - 1);
+            return lastCard.isOneRankLowerAndOppositeColor(card);
+        }
+    }
+    
 }
