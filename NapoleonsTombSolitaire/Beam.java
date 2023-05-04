@@ -30,12 +30,9 @@ public class Beam extends CardStack {
 
     @Override
     public Card getTopCard() {
-        if (isEmpty()) {
-            return null;
-        } else {
-            return cards.get(size() - 1);
-        }
+        return isEmpty() ? null : cards.get(cards.size() - 1);
     }
+    
 
     @Override
     public Card removeCard() {

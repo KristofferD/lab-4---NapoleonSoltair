@@ -42,4 +42,10 @@ public class Middle extends CardStack {
         }
         return removedCards;
     }
+
+    @Override
+    public Card getTopCard() {
+        return isEmpty() ? null : cards.get(cards.size() - 1);
+    }
+
 }

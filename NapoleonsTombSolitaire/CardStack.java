@@ -22,6 +22,11 @@ public abstract class CardStack {
         return removedCards;
     }
 
+    public List<Card> getCards() {
+        return cards;
+    }
+    
+
     public boolean canRemoveCards(int count) {
         return cards.size() >= count;
     }
@@ -57,6 +62,7 @@ public abstract class CardStack {
 
     public abstract boolean canAddCard(Card card);
     
+    @Override
     public boolean canAddCard(Card card) {
         if (cards.isEmpty()) {
             return card.getRank() == 13; // can only add a king to an empty stack

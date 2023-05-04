@@ -1,3 +1,6 @@
+import java.util.*;
+import Suit;
+
 public class Card {
     private String suit;
     private int rank;
@@ -26,10 +29,15 @@ public class Card {
     public boolean isOneRankLowerAndOppositeColor(Card card) {
         return card.getRank() == this.getRank() - 1 && !card.getColor().equals(this.getColor());
     }
-    
+
     public boolean isOneRankHigherAndOppositeColor(Card card) {
         return (this.getRank() == card.getRank() - 1) && (this.isRed() != card.isRed());
     }
+
+    public boolean isRed() {
+        return suit.equals(Suit.DIAMONDS) || suit.equals(Suit.HEARTS);
+    }
+    
     
     
 
