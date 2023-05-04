@@ -1,5 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+package com.example.napoleonsolitaire;
+import javax.swing.*;
+import java.util.*;
+import java.awt.*;
 
 public class GameBoardController {
     private GameBoard gameBoard;

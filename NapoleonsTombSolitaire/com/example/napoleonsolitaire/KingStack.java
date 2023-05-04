@@ -1,3 +1,6 @@
+package com.example.napoleonsolitaire;
+
+
 public class KingStack extends CardStack {
     private String suit;
     

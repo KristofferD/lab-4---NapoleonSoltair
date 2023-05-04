@@ -1,3 +1,4 @@
+package com.example.napoleonsolitaire;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JMenu;
@@ -40,7 +41,7 @@ public class NapoleonsTombSolitaire {
         GameBoardController controller = new GameBoardController(board);
 
         // Create a new graphical user interface for the game
-        JPanel gamePanel = new GamePanel(this);
+        JPanel gamePanel = new GamePanel(new GameBoardController(new GameBoard()));
         gamePanel.setPreferredSize(new Dimension(1920, 1080));
 
         // Set up the main window for the game

@@ -1,3 +1,4 @@
+package com.example.napoleonsolitaire;
 import java.util.ArrayList;
 import java.util.List;
 
