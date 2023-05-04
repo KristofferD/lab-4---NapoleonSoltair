@@ -1,5 +1,4 @@
 import java.util.*;
-import Suit;
 
 public class Card {
     private String suit;
@@ -35,7 +34,7 @@ public class Card {
     }
 
     public boolean isRed() {
-        return suit.equals(Suit.DIAMONDS) || suit.equals(Suit.HEARTS);
+        return suit.equals("diamonds") || suit.equals("hearts");
     }
     
     

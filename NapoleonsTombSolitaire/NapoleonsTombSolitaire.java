@@ -40,7 +40,7 @@ public class NapoleonsTombSolitaire {
         GameBoardController controller = new GameBoardController(board);
 
         // Create a new graphical user interface for the game
-        JPanel gamePanel = new GamePanel(controller);
+        JPanel gamePanel = new GamePanel(this);
         gamePanel.setPreferredSize(new Dimension(1920, 1080));
 
         // Set up the main window for the game

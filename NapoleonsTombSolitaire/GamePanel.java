@@ -8,7 +8,7 @@ public class GamePanel extends JPanel {
 
     public GamePanel(NapoleonsTombSolitaire game) {
         this.game = game;
-    }
+    }    
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -27,7 +27,7 @@ public class GamePanel extends JPanel {
             g.fillRect(x, y, width, height);
 
             // Draw the card backs
-            int numCards = game.getBeams().get(i).size();
+            int numCards = game.getBeamStacks().get(i).size();
             int cardY = y + padding;
             for (int j = 0; j < numCards; j++) {
                 g.setColor(Color.LIGHT_GRAY);
@@ -37,11 +37,12 @@ public class GamePanel extends JPanel {
             }
 
             // Draw the top card of the beam
-            List<Card> topCards = game.getBeams().get(i).getTopCards(1);
+            List<Card> topCards = game.getBeamStacks().get(i).getTopCards(1);
             if (topCards != null && !topCards.isEmpty()) {
                 Card topCard = topCards.get(0);
-                g.drawImage(topCard.getImage(), x, y, this);
+                g.drawImage(topCard.getCardImage(), x, y, this);
             }
+            
 
             
 

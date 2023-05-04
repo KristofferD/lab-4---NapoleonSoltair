@@ -33,8 +33,6 @@ public class Beam extends CardStack {
         return isEmpty() ? null : cards.get(cards.size() - 1);
     }
     
-
-    @Override
     public Card removeCard() {
         if (isEmpty()) {
             return null;
@@ -53,44 +51,3 @@ public class Beam extends CardStack {
     }
 }
 
-public class Middle extends CardStack {
-    private int middleNumber;
-
-    public Middle(int middleNumber) {
-        super();
-        this.middleNumber = middleNumber;
-    }
-
-    public int getMiddleNumber() {
-        return middleNumber;
-    }
-
-    @Override
-    public boolean canAddCard(Card card) {
-        if (isEmpty()) {
-            return card.getRank() == 6;
-        } else {
-            Card topCard = getTopCard();
-            return (card.getRank() == topCard.getRank() + 1 && !card.getSuit().equals(topCard.getSuit()));
-        }
-    }
-
-    @Override
-    public boolean canRemoveCards(int count) {
-        return size() >= count;
-    }
-
-    @Override
-    public Card removeCard() {
-        return cards.remove(cards.size() - 1);
-    }
-
-    @Override
-    public List<Card> removeCards(int count) {
-        List<Card> removedCards = new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            removedCards.add(removeCard());
-        }
-        return removedCards;
-    }
-}
